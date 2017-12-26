@@ -1,0 +1,15 @@
+version: "2"
+services: 
+  app:
+    container-name: usermanager
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+  mongo:
+    container-name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
