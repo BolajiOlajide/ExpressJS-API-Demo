@@ -1,0 +1,27 @@
+version: '3'
+services:
+  user_manager_api:
+    build:
+          context: .
+          dockerfile: Dockerfile
+    env_file: .env
+    links:
+      - mongo:mongo
+    depends_on:
+      - 'mongo'
+    volumes:
+      - '.:/user_manager_api'
+    environment:
+      - DB_URL=mongodb://admin:4dmInP4ssw0rd4444@localhost:27017/userManagerDB
+    ports:
+      - '3000:3000'
+
+  mongo:
+    restart: always
+    image: andelataiwo/mongo:3.4
+    volumes:
+      - 'mongo:/data/db'
+    ports:
+      - "27017:27017"
+volumes:
+  mongo:

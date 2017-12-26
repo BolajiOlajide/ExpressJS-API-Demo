@@ -109,6 +109,10 @@ password: janedoe
 }
 ```
 
+#### Run Docker
+ - `docker-compose build && docker-compose up -d`
+ - `docker-compose run user_manager_api  npm start`
+ 
 
 
 ### Author
