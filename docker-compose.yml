@@ -1,5 +1,6 @@
 version: "2"
 services:
+# this defines a service called app #
   app:
     container_name: app
     build: .
@@ -9,6 +10,8 @@ services:
       - mongo
   mongo:
     container_name: mongo
+    # this builds the mongo image from the docker repository #
     image: mongo
+    # maps the host port to the container port #
     ports:
       - "27017:27017"
