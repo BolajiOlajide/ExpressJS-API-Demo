@@ -13,7 +13,7 @@ This application was developed using [ExpressJS](http://expressjs.com/). MongoDB
 * Clone the repository by entering the command `git clone https://github.com/solitude687/UserManager.git` in the terminal.
 * Navigate to the project folder using `cd UserManager` on your terminal (or command prompt)
 * Give the run.sh file executable rights by typing `chmod +x run.sh`
-* Run the run.sh file by typing `sh run.sh`
+* Run the run.sh file by typing `./run.sh`
 
 ### Testing
 To ensure that your installation is successful you'll need to run tests.
